@@ -46,5 +46,20 @@
       "VERBOSITY"       : 2,
       "ETH_IPC_PATH"	: "/home/eth-node/.geth/geth.ipc"
     }
-  }
+  },
+  {
+    "name"              : "nodeApp",
+    "script"            : "/home/eth-node/lib/nodeapp/app.js",
+    "log_date_format"   : "YYYY-MM-DD HH:mm Z",
+    "merge_logs"        : false,
+    "watch"             : true,
+    "max_restarts"      : 0,
+    "exec_interpreter"  : "node",
+    "exec_mode"         : "fork_mode",
+    "env":
+    {
+      "NODE_ENV"        : "production",
+      "VERBOSITY"       : 2
+    }
+  }  
 ]

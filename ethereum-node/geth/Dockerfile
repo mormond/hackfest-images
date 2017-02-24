@@ -16,6 +16,10 @@ RUN git clone https://github.com/EthereumEx/eth-net-intelligence-api.git /home/e
 WORKDIR /home/eth-node/lib/ethStatsApi
 RUN npm install
 
+RUN git clone https://github.com/mormond/NodeApp.git /home/eth-node/lib/nodeapp
+WORKDIR /home/eth-node/lib/nodeapp
+RUN npm install
+
 WORKDIR /home/eth-node
 ADD app.json /home/eth-node/app.json
 ADD runGeth.sh /home/eth-node/runGeth.sh
