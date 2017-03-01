@@ -48,8 +48,8 @@
     }
   },
   {
-    "name"              : "nodeApp",
-    "script"            : "/home/eth-node/lib/nodeapp/app.js",
+    "name"              : "gethnodewatchdog",
+    "script"            : "/home/eth-node/lib/gethnodewatchdog/app.js",
     "log_date_format"   : "YYYY-MM-DD HH:mm Z",
     "merge_logs"        : false,
     "watch"             : true,
@@ -61,5 +61,22 @@
       "NODE_ENV"        : "production",
       "VERBOSITY"       : 2
     }
-  }  
+  },
+  {
+    "name"              : "ethkeybackup",
+    "script"            : "/home/eth-node/lib/ethkeybackup/app.js",
+    "log_date_format"   : "YYYY-MM-DD HH:mm Z",
+    "merge_logs"        : false,
+    "watch"             : true,
+    "max_restarts"      : 0,
+    "exec_interpreter"  : "node",
+    "exec_mode"         : "fork_mode",
+    "env":
+    {
+      "NODE_ENV"            : "production",
+      "BACKUP_ENVIRONMENT"  : "production",
+      "BACKUP_INTERVAL_SEC" : "30",
+      "VERBOSITY"           : 2
+    }
+  }      
 ]
