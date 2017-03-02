@@ -74,6 +74,8 @@
     "env":
     {
       "NODE_ENV"            : "production",
+      "BACKUP_ENVIRONMENT"  : "production",
+      "BACKUP_INTERVAL_SEC" : "30",
       "VERBOSITY"           : 2
     }
   }      
