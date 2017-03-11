@@ -16,11 +16,11 @@ RUN git clone https://github.com/EthereumEx/eth-net-intelligence-api.git /home/e
 WORKDIR /home/eth-node/lib/ethStatsApi
 RUN npm install
 
-RUN git clone https://github.com/mormond/GethNodeWatchdog /home/eth-node/lib/gethnodewatchdog
+RUN git clone https://github.com/mormond/ethereum-client-watchdog/ /home/eth-node/lib/gethnodewatchdog
 WORKDIR /home/eth-node/lib/gethnodewatchdog
 RUN npm install
 
-RUN git clone https://github.com/mormond/EthKeyBackup/ /home/eth-node/lib/ethkeybackup
+RUN git clone https://github.com/mormond/ethereum-keystore-backup/ /home/eth-node/lib/ethkeybackup
 WORKDIR /home/eth-node/lib/ethkeybackup
 RUN npm install
 
